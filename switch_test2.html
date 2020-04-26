@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Test 2! </title>
+	<style type="text/css">
+		input{
+			display: none;
+		}
+
+		.main-div{
+			margin-left: 40px;
+			height: 60px;
+			width: 7rem;
+			position: relative;
+			display: inline-block;
+			background-color: white;
+			border-radius: 2rem;
+			cursor: pointer;
+		}
+
+		.circle {
+			position: absolute;
+			top: 0;
+  			left: 0;
+  			right: 0;
+  			bottom: 0;
+  			border-radius: 2rem;
+  			border: 2px solid rgb(202,201,201);
+			background-color: white;
+			transition: .2s;
+		}
+
+		.circle:before {
+		    position: absolute;
+    		content: "";
+    		height: 48px;
+    		width: 48px;
+    		border-radius: 2rem;
+    		left: 4px;
+    		margin-top: 4px;
+    		background-color: white;
+    		box-shadow: 0px 0px 5px 1px #ccc;
+    		transition: .2s;
+		}
+
+
+		input:checked + .circle:before{
+  			transform: translateX(50px);
+		}
+
+		input:checked + .circle{
+			background-color: rgb(48,243,75);
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<label class="main-div">
+		<input type="checkbox">
+		<span class="circle"></span>
+	</label>
+
+</body>
+</html>
